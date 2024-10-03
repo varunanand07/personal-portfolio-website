@@ -3,6 +3,7 @@ import Navbar from "./components/NavBar"
 import Technologies from "./components/Technologies"
 import About from "./components/about"
 import Experience from "./components/Experience"
+import Projects from "./components/Projects"
 
 
 
@@ -21,6 +22,7 @@ const App = () => {
         <About />
         <Technologies />
         <Experience />
+        <Projects />
       </div>
     </div>
     </div>
