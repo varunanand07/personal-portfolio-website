@@ -2,6 +2,7 @@ import Hero from "./components/Hero"
 import Navbar from "./components/NavBar"
 import Technologies from "./components/Technologies"
 import About from "./components/about"
+import Experience from "./components/Experience"
 
 
 
@@ -19,6 +20,7 @@ const App = () => {
         <Hero />
         <About />
         <Technologies />
+        <Experience />
       </div>
     </div>
     </div>
