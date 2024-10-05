@@ -1,5 +1,7 @@
 import { PROJECTS } from "../constants";
 import { FaGithub } from "react-icons/fa";
+import { HiDocumentText } from "react-icons/hi2"; // Import Document Icon
+import { IoMdVideocam } from "react-icons/io";
 
 const Projects = () => {
   return (
@@ -19,17 +21,31 @@ const Projects = () => {
             </div>
             <div className="w-full max-w-xl lg:w-3/4">
               <h6 className="mb-2 font-semibold">{project.title}</h6>
-              <p className="mb-4 text-neutral-400">{project.description}</p>
+              <div className="mb-4 text-neutral-400">
+                {project.description.split('\n').map((line, idx) => (
+                  <p key={idx}>{line}</p> // Each description in a separate paragraph
+                ))}
+              </div>
               {project.technologies.map((tech, index) => (
-                <span key={index} className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900">
+                <span key={index} className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800">
                   {tech}
                 </span>
               ))}
             </div>
-            <div className="rounded-2xl p-4">
+            <div className="rounded-2xl p-4 flex flex-col items-center justify-center" style={{ width: '100px', height: '100%' }}>
               <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                <FaGithub className="text-7xl text-purple-800" />
+                <FaGithub className="text-7xl text-purple-800 mb-2" />
               </a>
+              {project.documentLink && ( // Conditional Document Icon
+                <a href={project.documentLink} target="_blank" rel="noopener noreferrer">
+                  <HiDocumentText className="text-5xl text-white-300 mt-4" />
+                </a>
+              )}
+              {project.videoLink && ( // Conditional Video Icon
+                <a href={project.videoLink} target="_blank" rel="noopener noreferrer" className="mt-5">
+                  <IoMdVideocam className="text-5xl text-blue-800" />
+                </a>
+              )}
             </div>
           </div>
         ))}

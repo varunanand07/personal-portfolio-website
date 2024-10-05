@@ -2,6 +2,8 @@ import React from 'react';
 import { EXPERIENCES } from '../constants';
 import { FaGithub } from "react-icons/fa";
 import { HiDocumentText } from "react-icons/hi2";
+import { IoMdVideocam } from "react-icons/io";
+
 
 const Experience = () => {
   return (
@@ -37,7 +39,12 @@ const Experience = () => {
               )}
               {experience.documentLink && (
                 <a href={experience.documentLink} target="_blank" rel="noopener noreferrer">
-                  <HiDocumentText className="text-5xl text-white-300 mt-8" />
+                  <HiDocumentText className="text-5xl text-white-300 mt-10" />
+                </a>
+              )}
+              {experience.videoLink && ( // Add video icon if video link exists
+                <a href={experience.videoLink} target="_blank" rel="noopener noreferrer" className="mt-2">
+                  <IoMdVideocam className="text-5xl text-blue-600 mt-10" />
                 </a>
               )}
             </div>

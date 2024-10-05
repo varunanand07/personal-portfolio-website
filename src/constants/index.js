@@ -26,31 +26,32 @@ export const EXPERIENCES = [
     role: "Software Engineering Project",
     company: "Liferay International",
     description: [
-      'Developed responsive web applications',
-      'Collaborated with designers and backend developers',
-      'Implemented user interfaces with React'
+      `● Designed and developed a Student Job Portal using HTML, CSS, SpringMVC, LiferayDXP and JavaScript aimed at streamlining recruitment with dynamic profile matching and real time notifications.`,
+      `● Led the Front End Dev Team and developed responsive UI/UX components and integrating features on Liferay DXP using Javascript, CSS, HTML, ReactJS and SpringMVC ensuring seamless user experience and project delivery.`,
+      `● Mentored a team of five second-year students in best web development practices within a collaborative and Agile
+      Framework, fostering a proactive learning environment.`,
     ],
     technologies: ["Javascript", "HTML", "CSS", "SpringMVC", "LiferayDXP"],
     documentLink: " ",
     githubLink: "",
+    videoLink: "https://drive.google.com/file/d/1kXkFFqesiBWmYh6fPd9mEz16T-m-kFM2/view",
   },
   {
     year: "Jan 2023 - May 2023",
     role: "Software Engineering Project",
     company: "Dell Technologies",
     description: [
-      `Engineered a Machine Learning Named Entity Recognition (NER) Model tuned to DELL data to recognize important entities within customer support textual logs such as person names, addresses, technical and non-technical issues.`,
-      " ",
-      " ",
-      `Leveraged open-source NER models (SpaCy, Flair), advanced NLP techniques including Deep Learning and trained the model on proprietary DELL data to recognize key entities specific to DELL's customer service environment.`,
-      `Reduced manual entity identification time by 33%, increasing the efficiency of DELL customer support.`,
-      `Analyzed 500+ Software Requirements monthly and collaborated with other engineers within an Agile Development
+      `● Engineered a Machine Learning Named Entity Recognition (NER) Model tuned to DELL data to recognize important entities within customer support textual logs such as person names, addresses, technical and non-technical issues.`,
+      `● Leveraged open-source NER models (SpaCy, Flair), advanced NLP techniques including Deep Learning and trained the model on proprietary DELL data to recognize key entities specific to DELL's customer service environment.`,
+      `● Reduced manual entity identification time by 33%, increasing the efficiency of DELL customer support.`,
+      `● Analyzed 500+ Software Requirements monthly and collaborated with other engineers within an Agile Development
        Environment to manage project workflow.`,
     ],
     technologies: ["Natural Language Processing", "Python", "spaCy", "AllenNLP", "ChatGPT API"],
     githubLink: "https://github.com/varunanand07/SwEng-Group-1-NER",
     documentLink: "https://docs.google.com/document/d/1IemgEo-UzCdUpSJ_t1SfTkIvv61n217n/edit?usp=sharing&ouid=109506858196002507642&rtpof=true&sd=true",
     showGithub: " ",
+    videoLink: "https://drive.google.com/file/d/1DYn9bnmFRYTToZdZnK6X_YST42QN_-hT/view",
   },
 ];
 
@@ -64,6 +65,8 @@ export const PROJECTS = [
       tasks.`,
     technologies: ["Java", "Spring Boot", "Dockerized Postgres", "JWT Authentication"],
     githubLink: "https://github.com/varunanand07/bus-notifier-app",
+    documentLink: "https://media.licdn.com/dms/document/media/D4E2DAQFhhMdc8PuJzA/profile-treasury-document-pdf-analyzed/0/1711250400497?e=1729123200&v=beta&t=A9iK_X5ePUKOaB7WREDh404ixjqHLnAF6yVftVuJy-w",
+    videoLink: "https://media.heanet.ie/page/4036dd86673244dfa70c490471ce0691",
   },
   {
     title: "Portfolio Website",
