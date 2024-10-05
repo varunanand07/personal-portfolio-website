@@ -39,9 +39,13 @@ export const EXPERIENCES = [
     role: "Software Engineering Project",
     company: "Dell Technologies",
     description: [
-      'Developed responsive web applications',
-      'Collaborated with designers and backend developers',
-      'Implemented user interfaces with React'
+      `Engineered a Machine Learning Named Entity Recognition (NER) Model tuned to DELL data to recognize important entities within customer support textual logs such as person names, addresses, technical and non-technical issues.`,
+      " ",
+      " ",
+      `Leveraged open-source NER models (SpaCy, Flair), advanced NLP techniques including Deep Learning and trained the model on proprietary DELL data to recognize key entities specific to DELL's customer service environment.`,
+      `Reduced manual entity identification time by 33%, increasing the efficiency of DELL customer support.`,
+      `Analyzed 500+ Software Requirements monthly and collaborated with other engineers within an Agile Development
+       Environment to manage project workflow.`,
     ],
     technologies: ["Natural Language Processing", "Python", "spaCy", "AllenNLP", "ChatGPT API"],
     githubLink: "https://github.com/varunanand07/SwEng-Group-1-NER",
