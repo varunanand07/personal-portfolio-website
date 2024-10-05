@@ -25,21 +25,27 @@ export const EXPERIENCES = [
     year: "Jan 2024 - May 2024",
     role: "Software Engineering Project",
     company: "Liferay International",
-    description: `Designed and developed a Student Job Portal using HTML, CSS, SpringMVC, LiferayDXP and JavaScript aimed at streamlining recruitment with dynamic profile matching and real time notifications.
-    Led the Front End Dev Team and developed responsive UI/UX components and integrating features on Liferay DXP using Javascript, CSS, HTML, ReactJS and SpringMVC ensuring seamless user experience and project delivery.
-    Mentored a team of five second-year students in best web development practices within a collaborative and Agile
-    Framework, fostering a proactive learning environment.`,
+    description: [
+      'Developed responsive web applications',
+      'Collaborated with designers and backend developers',
+      'Implemented user interfaces with React'
+    ],
     technologies: ["Javascript", "HTML", "CSS", "SpringMVC", "LiferayDXP"],
+    documentLink: " ",
     githubLink: "",
   },
   {
     year: "Jan 2023 - May 2023",
     role: "Software Engineering Project",
     company: "Dell Technologies",
-    description: `Engineered a Machine Learning Named Entity Recognition (NER) Model tuned to DELL data to recognize important entities within customer support textual logs such as person names, addresses, technical and non-technical issues. Leveraged open-source NER models (SpaCy, Flair), advanced NLP techniques including Deep Learning and trained the model on proprietary DELL data to recognize key entities specific to DELL's customer service environment. Reduced manual entity identification time by 33%, increasing the efficiency of DELL customer support. Analyzed 500+ Software Requirements monthly and collaborated with other engineers within an Agile Development
-    Environment to manage project workflow.`,
+    description: [
+      'Developed responsive web applications',
+      'Collaborated with designers and backend developers',
+      'Implemented user interfaces with React'
+    ],
     technologies: ["Natural Language Processing", "Python", "spaCy", "AllenNLP", "ChatGPT API"],
     githubLink: "https://github.com/varunanand07/SwEng-Group-1-NER",
+    documentLink: "https://docs.google.com/document/d/1IemgEo-UzCdUpSJ_t1SfTkIvv61n217n/edit?usp=sharing&ouid=109506858196002507642&rtpof=true&sd=true",
     showGithub: " ",
   },
 ];
