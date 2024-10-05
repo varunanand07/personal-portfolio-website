@@ -1,7 +1,7 @@
 import { PROJECTS } from "../constants";
 import { FaGithub } from "react-icons/fa";
-import { HiDocumentText } from "react-icons/hi2"; // Import Document Icon
-import { IoMdVideocam } from "react-icons/io";
+import { HiDocumentText } from "react-icons/hi2";
+import { IoMdVideocam } from "react-icons/io"; // Video icon
 
 const Projects = () => {
   return (
@@ -21,9 +21,9 @@ const Projects = () => {
             </div>
             <div className="w-full max-w-xl lg:w-3/4">
               <h6 className="mb-2 font-semibold">{project.title}</h6>
-              <div className="mb-4 text-neutral-400">
-                {project.description.split('\n').map((line, idx) => (
-                  <p key={idx}>{line}</p> // Each description in a separate paragraph
+              <div className='mb-4 text-neutral-400'>
+                {project.description.map((item, idx) => (
+                  <p key={idx} className="mb-4">{item}</p> // Add margin-bottom for spacing
                 ))}
               </div>
               {project.technologies.map((tech, index) => (
@@ -36,14 +36,14 @@ const Projects = () => {
               <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                 <FaGithub className="text-7xl text-purple-800 mb-2" />
               </a>
-              {project.documentLink && ( // Conditional Document Icon
+              {project.documentLink && (
                 <a href={project.documentLink} target="_blank" rel="noopener noreferrer">
-                  <HiDocumentText className="text-5xl text-white-300 mt-4" />
+                  <HiDocumentText className="text-5xl text-white-300 mt-6" />
                 </a>
               )}
-              {project.videoLink && ( // Conditional Video Icon
-                <a href={project.videoLink} target="_blank" rel="noopener noreferrer" className="mt-5">
-                  <IoMdVideocam className="text-5xl text-blue-800" />
+              {project.videoLink && (
+                <a href={project.videoLink} target="_blank" rel="noopener noreferrer" className="mt-2">
+                  <IoMdVideocam className="text-5xl text-blue-600 mt-6" />
                 </a>
               )}
             </div>

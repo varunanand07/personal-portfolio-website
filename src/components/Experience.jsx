@@ -4,7 +4,6 @@ import { FaGithub } from "react-icons/fa";
 import { HiDocumentText } from "react-icons/hi2";
 import { IoMdVideocam } from "react-icons/io";
 
-
 const Experience = () => {
   return (
     <div className="border-b border-neutral-900 pb-4">
@@ -24,7 +23,7 @@ const Experience = () => {
               </h6>
               <div className='mb-4 text-neutral-400'>
                 {experience.description.map((item, idx) => (
-                  <p key={idx}>{item}</p> // Each description in a separate paragraph
+                  <p key={idx} className="mb-4">{item}</p> // Add margin-bottom for spacing
                 ))}
               </div>
               {experience.technologies.map((tech, index) => (
