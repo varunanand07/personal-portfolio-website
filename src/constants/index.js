@@ -40,6 +40,7 @@ export const EXPERIENCES = [
     Environment to manage project workflow.`,
     technologies: ["Natural Language Processing", "Python", "spaCy", "AllenNLP", "ChatGPT API"],
     githubLink: "https://github.com/varunanand07/SwEng-Group-1-NER",
+    showGithub: " ",
   },
 ];
 

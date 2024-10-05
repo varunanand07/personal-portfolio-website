@@ -24,10 +24,12 @@ const Experience = () => {
                 <span key={index} className='mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800'>{tech}</span>
               ))}
             </div>
-            <div className="rounded-2xl p-4">
-              <a href={experience.githubLink} target="_blank" rel="noopener noreferrer">
-                <FaGithub className="text-7xl text-purple-800" />
-              </a>
+            <div className="rounded-2xl p-4 flex items-center justify-center" style={{ width: '100px', height: '100%' }}>
+              {experience.showGithub && (
+                <a href={experience.githubLink} target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="text-7xl text-purple-800" />
+                </a>
+              )}
             </div>
           </div>
         ))}
