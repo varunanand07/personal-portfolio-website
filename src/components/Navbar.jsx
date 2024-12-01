@@ -1,6 +1,7 @@
+// src/components/Navbar.jsx
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import cv from "../assets/Va (4).png"; // Your CV image
-import resume from "../assets/Resume_2024_2.pdf"; // Import your resume PDF
+import { FiDownload } from "react-icons/fi"; // Import download icon from react-icons
+import resume from "../assets/Resume_2024_10.pdf"; 
 
 const Navbar = () => {
   return (
@@ -8,31 +9,40 @@ const Navbar = () => {
       <div className="flex flex-shrink-0 items-center">
         {/* Optional logo or other elements */}
       </div>
-      <div className="m-8 flex items-center justify-center gap-4 text-3xl">
+      <div className="m-8 flex items-center justify-center gap-6 text-3xl">
+        {/* LinkedIn Icon */}
         <a
           href="https://www.linkedin.com/in/varun-anand-082b72257/" 
           target="_blank"
           rel="noopener noreferrer"
+          className="text-neutral-300 hover:text-blue-500 transition-colors duration-300"
+          aria-label="LinkedIn"
         >
           <FaLinkedin />
         </a>
+
+        {/* GitHub Icon */}
         <a
           href="https://github.com/varunanand07" 
           target="_blank"
           rel="noopener noreferrer"
+          className="text-neutral-300 hover:text-purple-900 transition-colors duration-300"
+          aria-label="GitHub"
         >
           <FaGithub />
         </a>
+
+        {/* Resume Button */}
         <a
-          href={resume} // Link to the imported resume PDF
+          href={resume}
+          download
           target="_blank"
           rel="noopener noreferrer"
+          className="flex items-center px-4 py-2 bg-white text-black rounded-full  transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+          aria-label="Download Resume"
         >
-          <img
-            src={cv} // Use your CV image as the link
-            alt="Curriculum Vitae"
-            className="w-20 h-20 object-cover" 
-          />
+          <FiDownload className="mr-2" />
+          <span className="text-lg font-medium">Resume</span>
         </a>
       </div>
     </nav>

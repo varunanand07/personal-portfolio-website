@@ -1,6 +1,6 @@
 // src/components/Certifications.jsx
 import React from "react";
-import { CERTIFICATIONS } from "../constants"; // Adjust the path as needed
+import { CERTIFICATIONS } from "../constants";
 import { motion } from "framer-motion";
 
 const Certifications = () => {
