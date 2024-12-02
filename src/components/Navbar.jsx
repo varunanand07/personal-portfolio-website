@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { FiDownload } from "react-icons/fi"; // Import download icon from react-icons
-import resume from "../assets/Resume_2024_11.pdf"; 
+import { FiDownload } from "react-icons/fi";
+import resume from "../assets/Resume_2024_12.pdf"; 
 
 const Navbar = () => {
   return (
