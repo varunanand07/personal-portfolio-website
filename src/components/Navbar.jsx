@@ -38,7 +38,7 @@ const Navbar = () => {
           download
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center px-4 py-2 bg-white text-black rounded-full  transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+          className="flex items-center px-4 py-2 bg-gray-200 text-black rounded-full  transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
           aria-label="Download Resume"
         >
           <FiDownload className="mr-2" />
