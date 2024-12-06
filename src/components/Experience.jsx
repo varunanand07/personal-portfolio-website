@@ -5,6 +5,9 @@ import { HiDocumentText } from "react-icons/hi2";
 import { IoMdVideocam } from "react-icons/io";
 import { motion } from "framer-motion";
 
+import dellLogo from '../assets/dell-logo.jpg';
+import liferayLogo from '../assets/liferay-logo.png';
+
 const Experience = () => {
   return (
     <div className="border-b border-neutral-900 pb-4">
@@ -26,6 +29,13 @@ const Experience = () => {
               className="w-full lg:w-1/4"
             >
               <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
+              {/* Conditional rendering of logos based on company */}
+              {experience.company === "Dell Technologies" && (
+                <img src={dellLogo} alt="Dell Logo" className="h-[10.25rem] mt-6 rounded" />
+              )}
+              {experience.company === "Liferay International" && (
+                <img src={liferayLogo} alt="Liferay Logo" className="h-16 mt-6 rounded" />
+              )}
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
@@ -44,8 +54,8 @@ const Experience = () => {
                   <p key={idx} className="mb-4">{item}</p>
                 ))}
               </div>
-              {experience.technologies.map((tech, index) => (
-                <span key={index} className='mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800'>
+              {experience.technologies.map((tech, i) => (
+                <span key={i} className='mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800'>
                   {tech}
                 </span>
               ))}

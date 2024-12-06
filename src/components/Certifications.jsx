@@ -36,7 +36,7 @@ const Certifications = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 100 }}
               transition={{ duration: 0.5 }}
-              className="w-full max-w-xl lg:w-3/4"
+              className="w-full max-w-xl lg:w-3/4 rounded"
             >
               <h6 className="mb-2 font-semibold text-xl">{cert.title}</h6>
               <p className="mb-1 text-neutral-400 italic">{cert.issuer}</p>

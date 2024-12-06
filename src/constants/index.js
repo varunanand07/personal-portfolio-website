@@ -12,20 +12,11 @@ I'm in the process of finishing my degree in Computer Science from Trinity Colle
 I'm currently working with my professor on an Automatic Video Translation Application using Natural Language Processing. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality business solutions. Outside of coding, I enjoy staying active, playing the guitar, exploring new technologies, and contributing to open-source projects. Check out my C.V or connect with me on LinkedIn, I'm always happy to meet new people! `;
 
 export const ABOUT_TEXT = [
-  `With me, you get a straight-forward, hardworking individual who thrives in the world of Software
-  Development. I love rising to the occasion, and often do my best work in situations alien to me.`,
-  `My resume speaks for itself – I’ve put in the hours, learnt from the best, and left every boss I’ve had thrilled with my
-  contributions. I adapt to new environments rapidly – whether it’s in Dell Technologies, a company ranked
-  31st on the list of Fortune 500 companies or if it is Liferay International, a relatively smaller, open source
-  company that provides enterprise solutions, I have a proven track record of translating ideas to code, building
-  full scale applications, working with professional teams, and producing workable business solutions. Beyond my individual skills, I understand that our field is built on team work, something I pride myself on.`,
-  `I am ready to take the lead if given a shot, and I know when take a backseat and provide support to my
-  colleagues and superiors. I am an effective communicator with all those I come across – technical
-  background or not. At the same time, I am constantly looking to learn from my fellow software engineers
-  and supervisors; every mistake is a new chance to do it right, and every suggestion a new tool in my arsenal.
-  Team work aside, I recognise the need for individual contributions. From building side projects to working
-  after hours to learn new skills, this is not something I am unfamiliar with. `
+  `I bring a straightforward, diligent approach to Software Development, excelling in challenges and unfamiliar situations. I thrive on solving problems and delivering results, even when stepping into unknown territory.`,
+  `My experience speaks volumes – I’ve dedicated time to mastering my craft, learning from top professionals, and exceeding expectations in every role. Whether at Dell Technologies, a Fortune 500 powerhouse, or Liferay International, an agile open-source enterprise solutions provider, I’ve consistently transformed ideas into robust code, developed full-scale applications, collaborated with professional teams, and delivered practical business solutions. I deeply value teamwork and understand its pivotal role in our field, making it a cornerstone of my work ethic.`,
+  `I’m ready to take the lead when the opportunity arises, and I know when to step back and provide support to colleagues and leaders. I excel at communicating effectively with individuals from technical and non-technical backgrounds alike. At the same time, I’m eager to learn from my peers and mentors, viewing mistakes as learning opportunities and suggestions as tools for growth. While teamwork is critical, I also embrace the importance of individual contributions. From developing side projects to acquiring new skills after hours, I’m driven to continuously improve and innovate.`
 ];
+
 
 export const EXPERIENCES = [
   {
@@ -141,7 +132,8 @@ export const CERTIFICATIONS = [
     credentialLink: "https://www.credly.com/badges/b491ea4e-7ea9-493b-8bbd-c4b2d3e6a7ef/public_url",
     image: awsLogo,
     description: [
-      "Demonstrated foundational knowledge of AWS Cloud, including AWS services, security, architecture, pricing, and support.",
+      "Examined foundational knowledge of AWS Cloud, including AWS services, security, architecture, pricing, and support.",
+      "Demonstrated 6 months of exposure to AWS Cloud design, implementation, and/or operations.",
       "Successfully passed the AWS Certified Cloud Practitioner exam, validating my understanding of AWS Cloud concepts and services.",
     ],
   },
