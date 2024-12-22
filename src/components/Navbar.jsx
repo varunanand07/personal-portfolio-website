@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
-import resume from "../assets/VarunAnand_Resume_2.pdf"; 
+import resume from "../assets/VarunAnand_Resume_3.pdf"; 
 
 const Navbar = () => {
   return (
