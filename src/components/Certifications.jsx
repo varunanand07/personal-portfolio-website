@@ -1,65 +1,75 @@
-// src/components/Certifications.jsx
 import React from "react";
 import { CERTIFICATIONS } from "../constants";
 import { motion } from "framer-motion";
+import { HiExternalLink } from "react-icons/hi";
 
-const Certifications = () => {
+const Certifications = ({ darkMode }) => {
   return (
-    <div id="certifications" className="border-b border-neutral-900 pb-4">
+    <div id="certifications" className={`py-16 ${darkMode ? 'border-b border-neutral-800' : 'border-b border-gray-200'}`}>
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="my-20 text-center text-4xl"
+        initial={{ opacity: 0, y: -25 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="mb-16 text-center text-4xl font-bold"
       >
-        Certifications
+        <span className={darkMode ? "text-white" : "text-gray-900"}>Certifications</span>
+        <div className="mt-2 mx-auto h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
       </motion.h2>
-      <div className="space-y-8">
+      
+      <div className="flex flex-col items-center max-w-5xl mx-auto">
         {CERTIFICATIONS.map((cert, index) => (
-          <div key={index} className="flex flex-wrap lg:justify-center">
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
-              className="w-full lg:w-1/4 flex justify-center items-center"
-            >
-              {/* AWS Logo Image */}
-              {cert.image && (
-                <img
-                  src={cert.image}
-                  alt={cert.title}
-                  className="mb-6 w-32 h-32 object-contain"
-                />
-              )}
-            </motion.div>
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 100 }}
-              transition={{ duration: 0.5 }}
-              className="w-full max-w-xl lg:w-3/4"
-            >
-              <h6 className="mb-2 font-semibold text-xl">{cert.title}</h6>
-              <p className="mb-1 text-neutral-400 italic">{cert.issuer}</p>
-              <p className="mb-4 text-neutral-400">{cert.date}</p>
-              <div className="mb-4">
-                {cert.description.map((item, idx) => (
-                  <p key={idx} className="mb-2">
-                    {item}
+          <motion.div 
+            key={index}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{ 
+              scale: 1.03,
+              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+            }}
+            className={`rounded-xl overflow-hidden shadow-lg ${darkMode ? 'bg-gray-900/50 hover:bg-gray-800/70' : 'bg-white hover:bg-gray-50'} transition-all duration-300 mb-8 w-full max-w-2xl`}
+          >
+            <div className="p-6">
+              <div className="flex items-start gap-4">
+                {cert.image && (
+                  <div className="shrink-0">
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="w-16 h-16 object-contain"
+                    />
+                  </div>
+                )}
+                
+                <div>
+                  <h3 className={`text-lg font-semibold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                    {cert.title}
+                  </h3>
+                  <p className={`text-sm mb-2 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                    {cert.issuer}
                   </p>
-                ))}
+                  <p className={`text-xs ${darkMode ? 'text-gray-500' : 'text-gray-400'}`}>
+                    {cert.date}
+                  </p>
+                  
+                  {cert.link && (
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`inline-flex items-center mt-3 text-sm ${
+                        darkMode ? 'text-purple-400 hover:text-purple-300' : 'text-purple-600 hover:text-purple-800'
+                      } transition-colors`}
+                    >
+                      View Certificate <HiExternalLink className="ml-1" />
+                    </a>
+                  )}
+                </div>
               </div>
-              {cert.credentialLink && (
-                <a
-                  href={cert.credentialLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-purple-600 hover:underline"
-                >
-                  View Credential
-                </a>
-              )}
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         ))}
       </div>
     </div>

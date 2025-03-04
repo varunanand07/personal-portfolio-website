@@ -13,30 +13,30 @@ I'm currently working with my professor on an Automatic Video Translation Applic
 
 export const ABOUT_TEXT = [
   `I bring a straightforward, diligent approach to Software Development, excelling in challenges and unfamiliar situations. I thrive on solving problems and delivering results, even when stepping into unknown territory.`,
-  `My experience speaks volumes – I’ve dedicated time to mastering my craft, learning from top professionals, and exceeding expectations in every role. Whether at Dell Technologies, a Fortune 500 powerhouse, or Liferay International, an agile open-source enterprise solutions provider, I’ve consistently transformed ideas into robust code, developed full-scale applications, collaborated with professional teams, and delivered practical business solutions. I deeply value teamwork and understand its pivotal role in our field, making it a cornerstone of my work ethic.`,
-  `I’m ready to take the lead when the opportunity arises, and I know when to step back and provide support to colleagues and leaders. I excel at communicating effectively with individuals from technical and non-technical backgrounds alike. At the same time, I’m eager to learn from my peers and mentors, viewing mistakes as learning opportunities and suggestions as tools for growth. While teamwork is critical, I also embrace the importance of individual contributions. From developing side projects to acquiring new skills after hours, I’m driven to continuously improve and innovate.`
+  `My experience speaks volumes – I've dedicated time to mastering my craft, learning from top professionals, and exceeding expectations in every role. Whether at Dell Technologies, a Fortune 500 powerhouse, or Liferay International, an agile open-source enterprise solutions provider, I've consistently transformed ideas into robust code, developed full-scale applications, collaborated with professional teams, and delivered practical business solutions. I deeply value teamwork and understand its pivotal role in our field, making it a cornerstone of my work ethic.`,
+  `I'm ready to take the lead when the opportunity arises, and I know when to step back and provide support to colleagues and leaders. I excel at communicating effectively with individuals from technical and non-technical backgrounds alike. At the same time, I'm eager to learn from my peers and mentors, viewing mistakes as learning opportunities and suggestions as tools for growth. While teamwork is critical, I also embrace the importance of individual contributions. From developing side projects to acquiring new skills after hours, I'm driven to continuously improve and innovate.`
 ];
 
 
 export const EXPERIENCES = [
   {
     year: "Jan 2024 - May 2024",
-    role: "Software Engineering Project",
+    role: "Student Software Engineer",
     company: "Liferay International",
     description: [
-      `Designed and developed a Student Job Portal using HTML, CSS, SpringMVC, LiferayDXP and JavaScript aimed at streamlining recruitment with dynamic profile matching and real time notifications.`,
-      `Led the Front End Dev Team and developed responsive UI/UX components and integrating features on Liferay DXP using Javascript, CSS, HTML, ReactJS and SpringMVC ensuring seamless user experience and project delivery.`,
+      `Designed and developed a Student Job Portal using HTML, CSS, SpringMVC, LiferayDXP, React.js and Java aimed at streamlining recruitment with dynamic profile matching and real time notifications.`,
+      `Led the Front End Dev Team and developed responsive UI/UX components and integrating features on Liferay DXP using Javascript, CSS, HTML, ReactJS, Java and SpringMVC ensuring seamless user experience and project delivery.`,
       `Mentored a team of five second-year students in best web development practices within a collaborative and Agile
       Framework, fostering a proactive learning environment.`,
     ],
-    technologies: ["Javascript", "HTML", "CSS", "SpringMVC", "LiferayDXP"],
+    technologies: ["Java","JavaScript", "HTML", "CSS", "SpringMVC", "LiferayDXP"],
     documentLink: " ",
     githubLink: "",
     videoLink: "https://drive.google.com/file/d/1kXkFFqesiBWmYh6fPd9mEz16T-m-kFM2/view",
   },
   {
     year: "Jan 2023 - May 2023",
-    role: "Software Engineering Project",
+    role: "Student Software Engineer",
     company: "Dell Technologies",
     description: [
       `Engineered a Machine Learning Named Entity Recognition (NER) Model tuned to DELL data to recognize important entities within customer support textual logs such as person names, addresses, technical and non-technical issues.`,
@@ -54,6 +54,36 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
+  {
+    title: "BurnoutBot (HackIreland 2025)",
+    image: project1,
+    description: [
+      "Built an AI Slack Bot with Node.js, Slack Bolt, Google Calendar, Firebase, and GPT-4 to detect meeting overload and schedule breaks. Reduced conflicts by 30% via real-time burnout alerts and automated scheduling.",
+      "Developed RESTful APIs and automated scheduling algorithms, deploying with Google Cloud Functions and Firebase. Improved efficiency by 20% through AI-driven workload management and CI/CD automation."
+    ],
+    technologies: ["Node.js", "Slack Bolt", "Firebase", "GPT-4", "Google Cloud"],
+    githubLink: "https://github.com/varunanand07/BurnoutBot-HackIreland-2025",
+  },
+  {
+    title: "Enigma: A Financial SaaS Platform",
+    image: project2,
+    description: [
+      "Developed a cloud-based financial SaaS platform enabling real-time transaction display and fund transfers across multiple bank accounts.",
+      "Implemented RESTful APIs with Node.js and TypeScript, integrating Plaid and Dwolla, ensuring scalability and secure SSR authentication on AWS EC2."
+    ],
+    technologies: ["Next.js", "React.js", "TypeScript", "AWS EC2"],
+    githubLink: "https://github.com/varunanand07/enigma-banking-app",
+  },
+  {
+    title: "Pathfinder Ireland",
+    image: project3,
+    description: [
+      "This app brings together features from several weather forecasting, recreation, and map navigation products. It allows users to search for locations on a map, ask about the weather, and explore various recreational activities all across Ireland, as well as get direction to a location.",
+      "The app visualises trails on the map and displays weather forecast at various time milestones calculated dynamically based on trail data."
+    ],
+    technologies: ["React Native", "Google Maps API", "Weather API", "Node.js"],
+    githubLink: "https://github.com/varunanand07/PathFinder-Ireland",
+  },
   {
     title: "Dynamic Flight Pricing System for Ryanair",
     image: ryanair,
@@ -75,7 +105,7 @@ export const PROJECTS = [
     title: "Pedestrian Crossing Analysis System",
     image: crossing,
     description: [
-      `Developed an automated system in C++ using OpenCV to analyze pedestrian crossing images taken from a vehicle’s perspective. The system utilized advanced computer vision techniques such as region and edge processing to accurately detect crossings under varying conditions, including lighting changes. Performance evaluation included precision, recall, and analysis of robustness across 20 static test images.`,
+      `Developed an automated system in C++ using OpenCV to analyze pedestrian crossing images taken from a vehicle's perspective. The system utilized advanced computer vision techniques such as region and edge processing to accurately detect crossings under varying conditions, including lighting changes. Performance evaluation included precision, recall, and analysis of robustness across 20 static test images.`,
       `Key Features:`,
       `- Designed and implemented a pipeline to locate pedestrian crossings effectively.`,
       `- Ensured adaptability to diverse environmental factors such as lighting variability.`,
@@ -94,7 +124,7 @@ export const PROJECTS = [
     image: project1,
     description:[
       `Developed a Real-Time Notification System for Bus Arrivals, implemented backend logic using Java and Spring Boot, leveraged Docker to run the database.`,
-      `Implemented VAPID keys and JWT signing for secure communication, providing testing keys for setup ease. Established integration with National Transport Authority’s General Transport Feed Specification (GTFS-R) data, ensuring
+      `Implemented VAPID keys and JWT signing for secure communication, providing testing keys for setup ease. Established integration with National Transport Authority's General Transport Feed Specification (GTFS-R) data, ensuring
       accurate real-time updates.`,
       `Orchestrated Dockerized Postgres for efficient data management, simplifying the deployment process for database-related
       tasks.`],
@@ -140,7 +170,7 @@ export const CERTIFICATIONS = [
 ];
 
 export const CONTACT = {
-  address: "Host Point Campus, Mayor Street Upper, Dublin 1, Ireland ",
+  address: "Canvas Point Campus, Mayor Street Upper, Dublin 1, Ireland ",
   phoneNo: "+353 894831889",
   email: "vanand@tcd.ie",
 };

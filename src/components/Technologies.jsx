@@ -1,117 +1,82 @@
+import React, { useRef } from "react";
 import { RiReactjsLine } from "react-icons/ri";
-import { SiMongodb } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
-import { FaAws } from "react-icons/fa";
-import { FaPython } from "react-icons/fa";
+import { SiMongodb, SiKubernetes } from "react-icons/si";
+import { FaNodeJs, FaAws, FaPython, FaDocker, FaJava } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { FaHtml5 } from "react-icons/fa";
-import { IoLogoCss3 } from "react-icons/io";
-import { FaDocker } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
-const iconVariants = (duration) => ({
-  initial: { y: -10 },
-  animate: {
-    y: [10, -10],
-    transition: {
-      duration: duration,
-      ease: "linear",
-      repeat: Infinity,
-      repeatType: "reverse",
-    },
-  },
-});
+const Technologies = ({ darkMode }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  
+  const techItems = [
+    { icon: <IoLogoJavascript className="text-5xl text-yellow-300" />, name: "JavaScript", level: "Advanced" },
+    { icon: <RiReactjsLine className="text-5xl text-cyan-400" />, name: "React", level: "Advanced" },
+    { icon: <FaNodeJs className="text-5xl text-green-500" />, name: "Node.js", level: "Intermediate" },
+    { icon: <BiLogoPostgresql className="text-5xl text-sky-700" />, name: "PostgreSQL", level: "Intermediate" },
+    { icon: <FaAws className="text-5xl text-orange-400" />, name: "AWS", level: "Intermediate" },
+    { icon: <FaPython className="text-5xl text-blue-500" />, name: "Python", level: "Advanced" },
+    { icon: <FaDocker className="text-5xl text-blue-700" />, name: "Docker", level: "Intermediate" },
+    { icon: <SiMongodb className="text-5xl text-green-500" />, name: "MongoDB", level: "Intermediate" },
+    { icon: <FaJava className="text-5xl text-red-500" />, name: "Java", level: "Intermediate" },
+    { icon: <SiKubernetes className="text-5xl text-blue-600" />, name: "Kubernetes", level: "Intermediate" },
+  ];
 
-const Technologies = () => {
+  // Container animation for the grid
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  // Item animation for each tech card
+  const item = {
+    hidden: { opacity: 0, scale: 0.8 },
+    show: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { type: "spring", stiffness: 300, damping: 24 }
+    }
+  };
+
   return (
-    <div className="border-b border-neutral-800 pb-24">
+    <div id="skills" className={`py-16 ${darkMode ? 'border-b border-neutral-800' : 'border-b border-gray-200'}`} ref={ref}>
       <motion.h2
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl"
+        initial={{ opacity: 0, y: -50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
+        transition={{ duration: 0.5 }}
+        className="mb-16 text-center text-4xl font-bold"
       >
-        Tech Stack
+        <span className={darkMode ? "text-white" : "text-gray-900"}>Tech Stack</span>
+        <div className="mt-2 mx-auto h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
       </motion.h2>
-      <motion.div
-        whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 1.5 }}
-        className="flex flex-wrap items-center justify-center gap-4"
+
+      <motion.div 
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8"
+        variants={container}
+        initial="hidden"
+        animate={isInView ? "show" : "hidden"}
       >
-        <motion.div
-          variants={iconVariants(2.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaHtml5 className="text-7xl text-orange-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <IoLogoCss3 className="text-7xl text-blue-500" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <IoLogoJavascript className="text-7xl text-yellow-300" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <RiReactjsLine className="text-7xl text-cyan-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaNodeJs className="text-7xl text-green-500" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <BiLogoPostgresql className="text-7xl text-sky-700" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(4)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaAws className="text-7xl text-white-700" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(6)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaPython className="text-7xl text-yellow-300" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(4)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaDocker className="text-7xl text-blue-700" />
-        </motion.div>
+        {techItems.map((tech, index) => (
+          <motion.div
+            key={index}
+            variants={item}
+            whileHover={{ y: -10, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
+            className={`flex flex-col items-center p-6 rounded-xl ${
+              darkMode ? 'bg-gray-900/40 hover:bg-gray-800/60' : 'bg-white hover:bg-gray-50'
+            } shadow-md transition-colors duration-300`}
+          >
+            {tech.icon}
+            <h3 className={`mt-3 font-medium ${darkMode ? 'text-white' : 'text-gray-900'}`}>{tech.name}</h3>
+            <p className={`text-xs mt-1 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>{tech.level}</p>
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );
